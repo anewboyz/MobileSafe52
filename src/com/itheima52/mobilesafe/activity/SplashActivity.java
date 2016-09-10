@@ -1,5 +1,12 @@
 package com.itheima52.mobilesafe.activity;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+
 import com.itheima52.mobilesafe.R;
 import com.itheima52.mobilesafe.R.id;
 import com.itheima52.mobilesafe.R.layout;
@@ -46,6 +53,24 @@ public class SplashActivity extends  Activity {
 		}
 		  
 		return "";
+	}
+	
+	/**
+	 * 从服务器获取版本号进行检测
+	 */
+	private void checkVersion()
+	{
+		try {
+			URL url=new URL("http://crm.xuetian.cn/appfile/update.json");
+			HttpURLConnection conn=(HttpURLConnection) url.openConnection();
+			
+		} catch (MalformedURLException e) {
+			// url异常
+			e.printStackTrace();
+		} catch (IOException e) {
+			// 网络错误异常
+			e.printStackTrace();
+		}
 	}
 
 
