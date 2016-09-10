@@ -44,7 +44,7 @@ public class SplashActivity extends  Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		  
 		return "";
 	}
 
