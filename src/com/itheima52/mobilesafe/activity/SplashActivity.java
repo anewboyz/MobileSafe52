@@ -11,6 +11,10 @@ import org.apache.http.HttpException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.lidroid.xutils.HttpUtils;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
+
 import android.R;
 import android.app.Activity;
 import android.app.AlertDialog;
