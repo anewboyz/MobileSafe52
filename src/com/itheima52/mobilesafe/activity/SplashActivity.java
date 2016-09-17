@@ -7,22 +7,11 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.HttpException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.itheima52.mobilesafe.R;
-import com.itheima52.mobilesafe.R.id;
-import com.itheima52.mobilesafe.R.layout;
-import com.itheima52.mobilesafe.R.menu;
-import com.itheima52.mobilesafe.utils.StreamUtils;
-import com.lidroid.xutils.HttpUtils;
-import com.lidroid.xutils.exception.HttpException;
-import com.lidroid.xutils.http.ResponseInfo;
-import com.lidroid.xutils.http.callback.RequestCallBack;
-
-import android.support.v7.app.ActionBarActivity;
-import android.R.integer;
+import android.R;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -36,9 +25,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
