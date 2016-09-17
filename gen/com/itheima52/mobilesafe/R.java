@@ -4,7 +4,7 @@
  * aapt tool from the resource data it found.  It
  * should not be modified by hand.
  */
-     
+
 package com.itheima52.mobilesafe;
 
 public final class R {
