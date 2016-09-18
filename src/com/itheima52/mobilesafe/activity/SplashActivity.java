@@ -11,11 +11,13 @@ import org.apache.http.HttpException;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.itheima52.mobilesafe.R;
+import com.itheima52.mobilesafe.utils.StreamUtils;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
-
-import android.R;
+ 
+ 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -290,9 +292,15 @@ public class SplashActivity extends  Activity {
 					
 				}
 				//œ¬‘ÿ ß∞‹
-				@Override
 				public void onFailure(HttpException arg0, String arg1) {
 					Toast.makeText(SplashActivity.this, "œ¬‘ÿ ß∞‹",Toast.LENGTH_SHORT).show();
+					
+				}
+				@Override
+				public void onFailure(
+						com.lidroid.xutils.exception.HttpException arg0,
+						String arg1) {
+					// TODO Auto-generated method stub
 					
 				}
 			});
