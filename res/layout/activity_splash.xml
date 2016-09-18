@@ -33,6 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:visibility="gone"
-        android:text="TextView" />
+        android:textColor="#f00"
+         />
     
 </RelativeLayout>
