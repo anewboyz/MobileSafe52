@@ -14,6 +14,19 @@
         android:textColor="@color/black"
         android:text="功能列表" />
     
+      <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="有了手机卫士, 腰不酸了,腿不疼了,走路也有劲了, 手机卫士太NB了" />
+    
     <GridView
         android:id="@+id/gv_home"
         android:layout_width="match_parent"
