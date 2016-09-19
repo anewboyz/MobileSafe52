@@ -21,6 +21,7 @@ import com.lidroid.xutils.http.callback.RequestCallBack;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -235,7 +236,7 @@ public class SplashActivity extends  Activity {
 		AlertDialog.Builder builder=new AlertDialog.Builder(this);
 		builder.setTitle("最新版本："+mVersonName);
 		builder.setMessage(mDesc);
-		System.out.println("builder到这里了：");
+		//builder.setCancelable(false);//让返回键失效，用户体验差
 		builder.setPositiveButton("立即更新",new OnClickListener() {
 			
 			@Override
@@ -249,10 +250,18 @@ public class SplashActivity extends  Activity {
 			
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
-				enterHome();
-				
+				enterHome(); 
 			}
 		} );
+		//设置取消的监听，用户点击返回按钮时触发
+		builder.setOnCancelListener(new OnCancelListener() {
+			
+				public void onCancel(DialogInterface arg0) {
+					enterHome(); 
+				}
+			}
+		);
+		
 		
 		builder.show();
 	}
@@ -313,6 +322,13 @@ public class SplashActivity extends  Activity {
 	}
 	
 	
+	
+	//如果用户取消安装，调用此方法
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		enterHome();
+		super.onActivityResult(requestCode, resultCode, data);
+	}
 	/**
 	 * 进入主界面
 	 */
