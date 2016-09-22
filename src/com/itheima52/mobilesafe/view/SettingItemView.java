@@ -1,6 +1,5 @@
 package com.itheima52.mobilesafe.view;
 
-import com.itheima52.mobilesafe.R;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -8,6 +7,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.itheima52.mobilesafe.R;
+
 
 public class SettingItemView extends RelativeLayout {
 	
@@ -21,11 +22,11 @@ public class SettingItemView extends RelativeLayout {
 	public SettingItemView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		// TODO Auto-generated constructor stub
-		initView();
+		initView(); 
 	}
 	public SettingItemView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// ¸ù¾İÊôĞÔÃû³Æ£¬»ñÈ¡ÊôĞÔµÄÖµ
+		// æ ¹æ®å±æ€§åç§°ï¼Œè·å–å±æ€§çš„å€¼
 		mTitle=attrs.getAttributeValue(NAMESPACE,"title");
 		mDescOn=attrs.getAttributeValue(NAMESPACE,"desc_on");
 		mDescOn=attrs.getAttributeValue(NAMESPACE,"desc_off");
@@ -38,13 +39,14 @@ public class SettingItemView extends RelativeLayout {
 	}
 	
 	private void initView(){
-		//½«×Ô¶¨ÒåºÃµÄ²¼¾ÖÎÄ¼ş¸øµ±Ç°µÄSettingItemView
+		//å°†è‡ªå®šä¹‰å¥½çš„å¸ƒå±€æ–‡ä»¶ç»™å½“å‰çš„SettingItemView
+		
 		View.inflate(getContext(), R.layout.view_seting_item, this);
 		tvTitle= (TextView) findViewById(R.id.tv_title);
 		tvDesc=(TextView) findViewById(R.id.tv_desc);
 		cbStatus=(CheckBox) findViewById(R.id.cb_status);
 		
-		
+		setTitle(mTitle);//è®¾ç½®æ ‡é¢˜
 	}
 
 	public void setTitle(String title)
@@ -57,7 +59,7 @@ public class SettingItemView extends RelativeLayout {
 		tvDesc.setText(desc);
 	}
 	/**
-	 * ·µ»Ø¹´Ñ¡×´Ì¬
+	 * è¿”å›å‹¾é€‰çŠ¶æ€
 	 * @return
 	 */
 	public boolean isChecked()
@@ -68,7 +70,7 @@ public class SettingItemView extends RelativeLayout {
 	{
 		cbStatus.setChecked(check);
 		
-		//¸ù¾İÑ¡ÔñµÄ×´Ì¬¸üĞÂÎÄ±¾ÃèÊö
+		//æ ¹æ®é€‰æ‹©çš„çŠ¶æ€æ›´æ–°æ–‡æœ¬æè¿°
 		if(check)
 		{
 			setDesc(mDescOn);

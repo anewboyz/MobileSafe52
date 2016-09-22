@@ -7,13 +7,13 @@ import java.io.InputStream;
 import android.R.integer;
 
 /**
- * 读取流的工具
+ * 璇诲彇娴佺殑宸ュ叿
  * @author Administrator
  *
  */
 public class StreamUtils {
 /**
- * 将输入流读取成string返回
+ * 灏嗚緭鍏ユ祦璇诲彇鎴恠tring杩斿洖
  * @param in
  * @return
  * @throws IOException
